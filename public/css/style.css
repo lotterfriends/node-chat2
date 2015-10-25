@@ -191,6 +191,10 @@ body {
   padding: 0;
 }
 
+.emojioneselector {
+  display: none;
+}
+
 .emojioneselector-filters {
   cursor: pointer;
   -moz-box-sizing: border-box;

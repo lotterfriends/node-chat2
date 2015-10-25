@@ -180,7 +180,7 @@
 
 
   var EmojiSelector = function(element, options) {
-    this.element = element;
+    this.element = element.show();
     this.options = $.extend({}, default_options, options);
     this.init();
   };
