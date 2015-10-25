@@ -1,0 +1,276 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  top: 50px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: #333;
+  border-left: 1px solid #000;
+  right: 0;
+  width: 70%;
+  box-shadow: 0 0 10px #000;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    box-shadow: 0 0 10px #000 inset;
+    width: inherit;
+    left: 0;
+    display: block !important;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  top: 50px;
+  position: absolute;
+  bottom: 45px;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+
+
+.error-container {
+  margin: 10px -5px;
+}
+
+.modal .error-container {
+  margin: 0;
+}
+
+.error-container + #messages-inner {
+  top: 70px;
+}
+
+#messages-inner {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  position: absolute;
+  bottom: 10px;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  overflow-y: scroll;
+  background: #fff;
+}
+
+#messages-inner .entry {
+  word-wrap: break-word;
+  margin: 0;
+  padding: 10px;
+}
+
+#messages-inner .entry:nth-child(odd) {
+  background-color: #efefef;
+}
+
+#messages-inner .username {
+  font-weight: bold;
+  color: #369BD7;
+}
+
+#messages-inner .time {
+  font-size: 0.9em;
+}
+
+#messages-inner img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-toggle {
+  padding: 6px 10px;
+}
+
+.navbar-toggle i {
+  color: #fff;
+}
+
+.navbar-toggle.active {
+  background-color: #333 !important;
+}
+
+@media (min-width: 768px) {
+  .error-container {
+    margin: 10px -30px;
+  }
+
+  .modal .error-container {
+    margin: 0;
+  }
+
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  padding: 5px 10px;
+  /*background-color: #f5f5f5;*/
+}
+.smileyHider {
+  display: none;
+}
+
+.smiley-holder + .popover h3.popover-title {
+  display:none; 
+}
+
+#kekse {
+  /*z-index: 1000;
+  position: fixed;
+  bottom: 0;*/
+}
+
+.popover-content {
+  padding: 0;
+}
+
+.emojioneselector-filters {
+  cursor: pointer;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #e5e5e5;
+  width: 100%;
+  height: 21px;
+  /*padding: 4px 0;*/
+  position: relative;
+  overflow: hidden;
+}
+/* line 76, ../scss/emojionearea.scss */
+.emojioneselector-filters .emojionselector-filter {
+  padding: 2px 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  top: 0 !important;
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  background-color: #e5e5e5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  /*opacity: 0.7;*/
+}
+
+.emojioneselector-filters .emojionselector-filter.active {
+  box-shadow: 0px 10px 15px 2px #000;
+  background-color: #fff; 
+}
+
+.emojioneselector-filters .emojionselector-filter:not(.active) {
+  border-bottom: 1px solid #666;
+}
+
+.emojioneselector-tabs {
+  /*padding: 5px 0;*/
+}
+
+.emojionselector-tab {
+  overflow: auto;
+  width: 190px;
+  height: 170px;  
+}
+
+.emojioneselector-tabs .emojionselector-tab .emojibtn {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 21px;
+  height: 21px;
+  float: left;
+  display: block;
+  margin: 1px;
+  padding: 3px;
+}
+
+.emojioneselector-tabs .emojionselector-tab .emojibtn:hover {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.emojioneselector-tabs .emojionselector-tab .emojibtn i,
+.emojioneselector-tabs .emojionselector-tab .emojibtn img {
+  float: left;
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+
+.emojioneselector-tabs .emojionselector-tab .emojibtn [class*=emojione-] {
+  margin: 0;
+  top: 0;
+}
+
+.modal-header, .modal-body, .modal-footer {
+  padding: 10px;
+}
