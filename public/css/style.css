@@ -62,7 +62,7 @@ a {
 
 .main {
   top: 50px;
-  position: absolute;
+  position: fixed;
   bottom: 45px;
   overflow: hidden;
   left: 0;
@@ -165,7 +165,7 @@ body {
   margin-bottom: 50px;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
