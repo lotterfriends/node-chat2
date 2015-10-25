@@ -1,8 +1,12 @@
+#!/usr/bin/env node
+
 var readline = require('readline'),
   chalk = require('chalk'),
   fs = require('fs'),
   filename = 'session-secret.json',
   jsonKey = 'session-secret';
+
+require('shelljs/global');
 
 var rl = readline.createInterface({
   input: process.stdin,
@@ -49,4 +53,6 @@ if (!test('-f', filename)) {
     });
   });
 
+} else {
+  process.exit(0);
 }
