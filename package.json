@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "init": "npm install; bower install; node scripts/build; node scripts/generate-secret",
+    "preinit": "npm install",
+    "init": "node scripts/build",
+    "postinit": "node scripts/generate-secret",
     "start": "node server"
   },
   "dependencies": {
