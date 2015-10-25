@@ -225,7 +225,7 @@ $(function() {
     }
   });
 
-  $('.navbar-toggle').on('click touchstart', function() {
+  $('.navbar-toggle').on('click', function() {
     $('.sidebar').toggle();
     $('.navbar-toggle').toggleClass('active');
   });
