@@ -32,9 +32,8 @@ var quest = function(prompt, callback) {
 };
 
 var createSessionSecretFile = function(secret, successFunction) {
-  var fileData = {
-    jsonKey: secret
-  };
+  var fileData = {}
+  fileData[jsonKey] = secret;
   fs.writeFile(filename, JSON.stringify(fileData , null, '\t'), function(err) {
     if (err) {
       return console.log('Got error:' + err);
