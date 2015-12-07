@@ -164,7 +164,7 @@
     return str.replace(/:?[\w-_)]+:?/g, function(shortname) {
       shortname = ":" + shortname.replace(/:$/,'').replace(/^:/,'') + ":";
       if (shortname in emojione.emojioneList) {
-        return getTemplate(template, emojione.emojioneList[shortname][emojione.emojioneList[shortname].length-1].toUpperCase(), shortname);
+        return getTemplate(template, emojione.emojioneList[shortname][emojione.emojioneList[shortname].length-1]  .toUpperCase(), shortname);
       }
       return shortname;
     });
@@ -177,7 +177,6 @@
       .replace('{uni}', unicode)
       .replace('{alt}', emojione.convert(unicode));
   };
-
 
   var EmojiSelector = function(element, options) {
     this.element = element.show();
@@ -222,7 +221,7 @@
     _this.element.find('.emojioneselector-tabs').children().each(function(index, element) {
       var $element = $(element),
         timer,
-        tab = $(this),//_this.element.find('.emojioneselector-tabs').children().filter(".emojionearea-tab-" + $element.data("filter")),
+        tab = $(this),
         items = tab.data("items");
       if (index > 0) {
         $element.hide();
