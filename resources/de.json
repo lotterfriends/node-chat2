@@ -1,0 +1,12 @@
+{
+	"error.NoUsername" : "Kein Benutzername eingegeben",
+	"error.UsernameChoosen" : "Benutzername bereits vergeben",
+	"error.toLongUsername" : "Zu langer Benutzername",
+	"error.toShortUsername" : "Der Benutzername ist zu kurz (Min. 4 Zeichen)",
+	"error.notLoggedIn" : "Nicht eingeloggt!",
+	"error.noMessage" : "Keine Nachricht eingegeben",
+	"error.longMessage" : "Die eingebene Nachricht ist zu lang",
+	"user.youConnected" : "du bist verbunden",
+	"user.hasConnected" : "{1} hat sich verbunden",
+	"user.logedout" : "{1} wurde ausgeloggt"
+}

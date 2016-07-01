@@ -1,0 +1,173 @@
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  top: 50px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: #333;
+  border-left: 1px solid #000;
+  right: 0;
+  width: 70%;
+  box-shadow: 0 0 10px #000;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    box-shadow: 0 0 10px #000 inset;
+    width: inherit;
+    left: 0;
+    display: block !important;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  top: 50px;
+  position: fixed;
+  bottom: 45px;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+
+
+.error-container {
+  margin: 10px -5px;
+}
+
+.modal .error-container {
+  margin: 0;
+}
+
+.error-container + #messages-inner {
+  top: 70px;
+}
+
+#messages-inner {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  position: absolute;
+  bottom: 10px;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  overflow-y: scroll;
+  background: #fff;
+}
+
+#messages-inner .entry {
+  word-wrap: break-word;
+  margin: 0;
+  padding: 10px;
+}
+
+#messages-inner .entry:nth-child(odd) {
+  background-color: #efefef;
+}
+
+#messages-inner .username {
+  font-weight: bold;
+  color: #369BD7;
+}
+
+#messages-inner .time {
+  font-size: 0.9em;
+}
+
+#messages-inner img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-toggle {
+  padding: 6px 10px;
+}
+
+.navbar-toggle i {
+  color: #fff;
+}
+
+.navbar-toggle.active {
+  background-color: #333 !important;
+}
+
+@media (min-width: 768px) {
+  .error-container {
+    margin: 10px -30px;
+  }
+
+  .modal .error-container {
+    margin: 0;
+  }
+
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  padding: 5px 10px;
+}
+
+.popover-content {
+  padding: 0;
+}
+
+.modal-header, .modal-body, .modal-footer {
+  padding: 10px;
+}

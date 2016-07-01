@@ -1,0 +1,25 @@
+{
+  "name": "node-chat2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "preinit": "npm install",
+    "init": "node scripts/build",
+    "postinit": "node scripts/generate-secret",
+    "start": "node server"
+  },
+  "dependencies": {
+    "bbcode": "^0.1.5",
+    "body-parser": "^1.14.1",
+    "bootstrap": "~3.3.5",
+    "chalk": "^1.1.1",
+    "coffee-script": "^1.10.0",
+    "connect": "^3.4.0",
+    "cookie-parser": "^1.4.0",
+    "emojione": "^1.5.1",
+    "express.io": "^1.1.13",
+    "jquery": "^2.1.4",
+    "morgan": "^1.6.1",
+    "shelljs": "^0.5.3"
+  }
+}
