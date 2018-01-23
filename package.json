@@ -18,7 +18,7 @@
     "cookie-parser": "^1.4.0",
     "emojione": "^1.5.1",
     "express.io": "^1.1.13",
-    "jquery": "^2.1.4",
+    "jquery": "^3.0.0",
     "morgan": "^1.6.1",
     "shelljs": "^0.5.3"
   }
